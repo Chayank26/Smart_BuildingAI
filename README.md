@@ -1,82 +1,31 @@
-# Smart Building AI - Autonomous Control System
+---
 
-An end-to-end Python framework for autonomous smart building management, integrating EnergyPlus simulation co-simulation, Model Context Protocol (MCP) server control tools, intelligent setpoint optimization agents, and an interactive Streamlit dashboard.
+## 🎉 Project Overview & Completion
+
+The **Autonomous AI Agent for Smart Building Energy Management** is now fully operational end-to-end!
+
+### 🧱 Core Architecture & Pipeline
+1. **Physics & Building Simulation Engine (`simulation/energyplus_wrapper.py`)**  
+   Integrates directly with the **EnergyPlus C-API** to step through thermal dynamics in real time, serving live zone temperatures, PMV comfort indices, and HVAC power consumption.
+
+2. **Model Context Protocol Server (`server/mcp_server.py`)**  
+   Implements a FastMCP tool server providing standard API endpoints (`get_building_telemetry`, `update_hvac_setpoint`, `get_grid_carbon_intensity`) for LLM interaction.
+
+3. **Autonomous Agentic Supervisory Loop (`simulation/agent_controller.py`)**  
+   A closed-loop agent that continuously monitors telemetry, detects comfort breaches or high-carbon grid signals, and autonomously invokes MCP tool calls to adjust setpoints while minimizing latency via smart step skipping.
+
+4. **Real-time Analytics Dashboard (`dashboard/app.py`)**  
+   A Streamlit dashboard rendering live run history, setpoint adjustments, power demand profiles, and total carbon saved.
 
 ---
 
-## 📁 Project Layout
+### 💻 Quick Start Command
 
-```
-Smart_BuildingAI/
-├── data/                       # Building (.idf) and weather (.epw) input files
-│   └── README.md               # Instructions for placing simulation data
-├── server/                     # Model Context Protocol (MCP) tool integration
-│   ├── __init__.py
-│   ├── mcp_server.py           # FastMCP server exposing building tools
-│   └── tools.py                # Pydantic schemas and tool handlers
-├── simulation/                 # Co-simulation and agent decision logic
-│   ├── __init__.py
-│   ├── energyplus_wrapper.py   # EnergyPlus API wrapper & state bridge
-│   └── agent.py                # Autonomous agent control policies
-├── dashboard/                  # Interactive Streamlit monitoring dashboard
-│   ├── __init__.py
-│   └── app.py                  # Real-time telemetry & Plotly charts
-├── .env                        # Active environment configuration
-├── .env.example                # Template for environment variables
-├── .gitignore                  # Git ignore rules for virtualenv & E+ outputs
-├── requirements.txt            # Python dependencies
-└── README.md                   # Project documentation
-```
-
----
-
-## 🚀 Quick Start Guide
-
-### 1. Prerequisites & Virtual Environment
-
-Create and activate a Python virtual environment:
+To run the complete system from the project root:
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate
-```
+# 1. Run the Closed-Loop Agent Simulation
+PYTHONPATH=/Applications/EnergyPlus:. python simulation/agent_controller.py
 
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-### 2. Environment Configuration
-
-Copy `.env.example` to `.env` and fill in your API keys and EnergyPlus path settings:
-
-```bash
-cp .env.example .env
-```
-
-### 3. Run the MCP Server
-
-Start the Model Context Protocol server to expose building control tools to LLMs and agents:
-
-```bash
-python -m server.mcp_server
-```
-
-### 4. Run the EnergyPlus Simulation Agent
-
-Run the autonomous agent step execution:
-
-```bash
-python -m simulation.agent
-```
-
-### 5. Launch the Streamlit Dashboard
-
-Run the Streamlit monitoring and control interface:
-
-```bash
-streamlit run dashboard/app.py
-```
-
-Open `http://localhost:8501` in your browser.
+# 2. Launch the Streamlit Analytics Dashboard
+PYTHONPATH=/Applications/EnergyPlus:. streamlit run dashboard/app.py

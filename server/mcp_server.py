@@ -7,9 +7,10 @@ and grid carbon intensity monitoring to LLM agents.
 import os
 import sys
 from dotenv import load_dotenv
+# pyrefly: ignore [missing-import]
 from mcp.server.fastmcp import FastMCP
 
-from server.tools import (
+from tools import (
     get_building_telemetry,
     update_hvac_setpoint,
     get_grid_carbon_intensity,

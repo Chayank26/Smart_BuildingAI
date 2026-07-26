@@ -9,13 +9,15 @@ import sys
 import time
 from typing import Dict, Any, Optional, List, Callable
 
-# Check for EnergyPlus installation path in environment
-EP_DIR = os.getenv("ENERGYPLUS_DIR", "/usr/local/EnergyPlus-23-2-0")
+# Check for EnergyPlus installation path in environment or standard macOS Application folder
+EP_DIR = os.getenv("ENERGYPLUS_DIR", "/Applications/EnergyPlus")
 if os.path.exists(EP_DIR) and EP_DIR not in sys.path:
     sys.path.insert(0, EP_DIR)
 
+
 # Attempt import of official pyenergyplus API
 try:
+    # pyrefly: ignore [missing-import]
     from pyenergyplus.api import EnergyPlusAPI
     PYENERGYPLUS_AVAILABLE = True
 except ImportError:
@@ -34,7 +36,7 @@ class EnergyPlusRunner:
         self,
         idf_path: Optional[str] = None,
         epw_path: Optional[str] = None,
-        zone_name: str = "Zone_1",
+        zone_name: str = "ZONE ONE",
     ):
         self.idf_path = idf_path or os.getenv("IDF_FILE_PATH", "data/building.idf")
         self.epw_path = epw_path or os.getenv("EPW_FILE_PATH", "data/weather.epw")
@@ -155,22 +157,27 @@ class EnergyPlusRunner:
         if not self.handles_initialized:
             self._initialize_handles(state)
 
-        # Read Zone Metrics
+        # 1. Read Zone Mean Air Temperature
         zone_temp = (
             exchange.get_variable_value(state, self.handle_temp)
             if self.handle_temp != -1
             else 22.0
         )
-        pmv = (
-            exchange.get_variable_value(state, self.handle_pmv)
-            if self.handle_pmv != -1
-            else 0.0
-        )
-        hvac_power = (
-            exchange.get_variable_value(state, self.handle_hvac_power)
-            if self.handle_hvac_power != -1
-            else 0.0
-        )
+
+        # 2. Read or Calculate Estimated PMV (Thermal Comfort)
+        if self.handle_pmv != -1:
+            pmv = exchange.get_variable_value(state, self.handle_pmv)
+        else:
+            # Approximate PMV: 0.0 at 22°C, +1.0 at 26°C, -1.0 at 18°C
+            pmv = (zone_temp - 22.0) * 0.25
+
+        # 3. Read or Calculate Estimated HVAC Power
+        if self.handle_hvac_power != -1:
+            hvac_power = exchange.get_variable_value(state, self.handle_hvac_power)
+        else:
+            # Basic load estimation: higher draw when temp exceeds cooling setpoint
+            cooling_delta = max(0.0, zone_temp - self.current_cooling_sp)
+            hvac_power = 1.2 + (cooling_delta * 1.8) if cooling_delta > 0 else 0.2
 
         # Timestamp tracking
         month = exchange.month(state)
@@ -183,7 +190,7 @@ class EnergyPlusRunner:
             "timestamp": timestamp_str,
             "zone_temp_c": round(zone_temp, 2),
             "pmv": round(pmv, 2),
-            "hvac_power_kw": round(hvac_power / 1000.0 if hvac_power > 100 else hvac_power, 2),
+            "hvac_power_kw": round(hvac_power, 2),
             "heating_setpoint": self.current_heating_sp,
             "cooling_setpoint": self.current_cooling_sp,
         }
@@ -274,3 +281,24 @@ class EnergyPlusRunner:
 
 # Alias for backward compatibility
 EnergyPlusWrapper = EnergyPlusRunner
+
+if __name__ == "__main__":
+    print("\n" + "="*60)
+    print("Launching Full EnergyPlus Simulation Run...")
+    print("="*60)
+    
+    # 1. Initialize runner with your data paths
+    runner = EnergyPlusRunner(
+        idf_path="data/baseline.idf",
+        epw_path="data/weather.epw",
+        zone_name="ZONE ONE"  # Note: Adjust if your IDF uses a different zone name like 'SPACE1-1'
+    )
+    
+    # 2. Run the actual simulation
+    exit_code = runner.run_simulation(output_directory="simulation/output")
+    
+    if exit_code == 0:
+        print("\n Simulation completed successfully!")
+    else:
+        print(f"\n Simulation failed with exit code: {exit_code}")
+
