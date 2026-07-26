@@ -1,0 +1,19 @@
+# Autonomous Smart Building Control System Dependencies
+
+# Model Context Protocol (MCP) Server
+mcp>=1.0.0
+
+# Building Simulation & Data Handling
+# Note: EnergyPlus Python API is typically bundled with EnergyPlus installation.
+# eppy / pyep can be used as lightweight wrappers or interfaces.
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Dashboard & Visualization
+streamlit>=1.30.0
+plotly>=5.18.0
+
+# Data Validation & API Utilities
+pydantic>=2.5.0
+requests>=2.31.0
+python-dotenv>=1.0.0

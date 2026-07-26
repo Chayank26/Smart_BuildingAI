@@ -1,0 +1,39 @@
+# Environment variables
+.env
+*.env
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# EnergyPlus Simulation Outputs
+*.eso
+*.csv
+*.htm
+*.html
+*.eplusout
+*.audit
+*.bnd
+*.dxf
+*.err
+*.mdd
+*.mtd
+*.rdd
+*.shd
+*.end
+simulation/output/
+
+# Streamlit
+.streamlit/
+
+# IDE & OS files
+.DS_Store
+.idea/
+.vscode/
