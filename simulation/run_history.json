@@ -1,0 +1,800 @@
+[
+  {
+    "step": 1,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Initial Simulation Start Trigger",
+    "llm_invoked": true,
+    "ecm_strategy": "Nominal Energy Efficiency ECM",
+    "llm_reasoning": "Building metrics and carbon intensity are within nominal bounds. Maintaining standard setpoints [20.0\u00b0C, 24.0\u00b0C].",
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.25,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "action_taken": {
+      "status": "success",
+      "zone_id": "Zone_1",
+      "updated_cooling_setpoint": 24.0,
+      "updated_heating_setpoint": 20.0,
+      "message": "Successfully updated HVAC setpoints for Zone_1 to Heating: 20.0\u00b0C, Cooling: 24.0\u00b0C."
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    },
+    "estimated_carbon_savings_gco2": 50.58
+  },
+  {
+    "step": 2,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 3,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 4,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 5,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 6,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 7,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 8,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 9,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 10,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 11,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 12,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Hourly Supervisory Schedule Trigger (Step 12)",
+    "llm_invoked": true,
+    "ecm_strategy": "Nominal Energy Efficiency ECM",
+    "llm_reasoning": "Building metrics and carbon intensity are within nominal bounds. Maintaining standard setpoints [20.0\u00b0C, 24.0\u00b0C].",
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "action_taken": {
+      "status": "success",
+      "zone_id": "Zone_1",
+      "updated_cooling_setpoint": 24.0,
+      "updated_heating_setpoint": 20.0,
+      "message": "Successfully updated HVAC setpoints for Zone_1 to Heating: 20.0\u00b0C, Cooling: 24.0\u00b0C."
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    },
+    "estimated_carbon_savings_gco2": 50.58
+  },
+  {
+    "step": 13,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 14,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 15,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 16,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 17,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 18,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 19,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 20,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 21,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 22,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 23,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Nominal Timestep (No LLM Invocation Required)",
+    "llm_invoked": false,
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    }
+  },
+  {
+    "step": 24,
+    "timestamp": "2026-07-26 09:46:05",
+    "zone_id": "Zone_1",
+    "trigger_reason": "Hourly Supervisory Schedule Trigger (Step 24)",
+    "llm_invoked": true,
+    "ecm_strategy": "Nominal Energy Efficiency ECM",
+    "llm_reasoning": "Building metrics and carbon intensity are within nominal bounds. Maintaining standard setpoints [20.0\u00b0C, 24.0\u00b0C].",
+    "telemetry": {
+      "zone_id": "Zone_1",
+      "indoor_temperature_c": 22.4,
+      "indoor_air_quality_co2_ppm": 450.0,
+      "pmv_thermal_comfort": 0.12,
+      "hvac_power_kw": 4.0,
+      "humidity_percent": 48.0,
+      "occupancy_count": 12,
+      "heating_setpoint_c": 20.0,
+      "cooling_setpoint_c": 24.0,
+      "timestamp": "2026-07-26 09:46:05"
+    },
+    "grid_carbon": {
+      "timestamp": "2026-07-26 09:46:05",
+      "carbon_intensity_gco2_kwh": 275.9,
+      "grid_status": "Moderate Carbon Intensity"
+    },
+    "action_taken": {
+      "status": "success",
+      "zone_id": "Zone_1",
+      "updated_cooling_setpoint": 24.0,
+      "updated_heating_setpoint": 20.0,
+      "message": "Successfully updated HVAC setpoints for Zone_1 to Heating: 20.0\u00b0C, Cooling: 24.0\u00b0C."
+    },
+    "simulation_metrics": {
+      "timestamp": "2026-07-26 09:46:05",
+      "zone_temp_c": 21.5,
+      "pmv": 0.0,
+      "hvac_power_kw": 2.8,
+      "heating_setpoint": 20.0,
+      "cooling_setpoint": 24.0
+    },
+    "estimated_carbon_savings_gco2": 50.58
+  }
+]
